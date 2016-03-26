@@ -1,1 +1,3 @@
-include ':app'
+include ':app', ':volley', ':library', ':sample'
+project(':library').projectDir = new File('PagerSlidingTabStrip/library')
+project(':sample').projectDir = new File('PagerSlidingTabStrip/sample')
