@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dhairya.complaintsystem.LoginActivity"
+    android:background="@drawable/iitdelhi">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="IIT-D"
+        android:id="@+id/titleText1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="70sp"
+        android:textColor="#595959"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        android:shadowDx="-2"
+        android:shadowDy="-2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Complaint System"
+        android:id="@+id/titleText2"
+        android:layout_below="@+id/titleText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:textSize="37sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:shadowColor="#e6e6e6"
+        android:shadowRadius="4"
+        android:shadowDx="-2"
+        android:shadowDy="-2"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/username"
+        android:layout_below="@+id/titleText2"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="username"
+        android:inputType="textNoSuggestions"
+        android:background="@drawable/username_edititext"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword|textNoSuggestions"
+        android:textSize="16sp"
+        android:id="@+id/password"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="password"
+        android:background="@drawable/password_edittext"/>
+
+    <com.example.dhairya.complaintsystem.NoDefaultSpinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="10dp"
+        android:id="@+id/category"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/category"
+        android:prompt="@string/Prompt"
+        />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="LOG IN"
+        android:id="@+id/Submit"
+        android:background="@drawable/button_bg"
+        android:layout_below="@+id/category"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        android:textColor="#4d2600"
+        android:onClick="login"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
