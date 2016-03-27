@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">IIT-D Complaints System</string>
+    <string name="app_name">IIT-D Complaint System</string>
+    <string name="Prompt">Category</string>
+    <string name="category">Category*</string>
+    <string name="usertype">User Type*</string>
+    <string name="hostel">Hostel</string>
+    <string name="level">Level*</string>
+    <string name="type">Type*</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

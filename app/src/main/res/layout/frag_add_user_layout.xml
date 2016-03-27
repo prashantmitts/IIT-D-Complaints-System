@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name* :"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameEdit"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="65dp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:inputType="textNoSuggestions|textCapWords"
+        android:singleLine="true">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entry Number :"
+        android:id="@+id/entryNumber"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="13dp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/entryNumberEdit"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="120dp"
+        android:textSize="18sp"
+        android:textColor="#800000"
+        android:inputType="textNoSuggestions|textCapCharacters"
+        android:singleLine="true">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username* :"
+        android:id="@+id/username"
+        android:layout_below="@+id/entryNumber"
+        android:layout_marginTop="13dp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameEdit"
+        android:layout_below="@+id/entryNumber"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="18sp"
+        android:textColor="#800000"
+        android:inputType="textNoSuggestions"
+        android:singleLine="true">
+    </EditText>
+
+    <com.example.dhairya.complaintsystem.NoDefaultSpinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/usernameEdit"
+        android:layout_marginTop="7dp"
+        android:id="@+id/category"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/category"
+        android:prompt="@string/category"
+        android:textAlignment="viewStart"
+        />
+
+    <com.example.dhairya.complaintsystem.NoDefaultSpinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/category"
+        android:layout_marginTop="7dp"
+        android:id="@+id/usertype"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/category"
+        android:prompt="@string/usertype"
+        />
+
+    <com.example.dhairya.complaintsystem.NoDefaultSpinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/usertype"
+        android:layout_marginTop="7dp"
+        android:id="@+id/hostel"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/category"
+        android:prompt="@string/hostel"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*mandatory fields"
+        android:id="@+id/asterisk"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submitButton"
+        android:background="@drawable/button_bg"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_below="@+id/asterisk"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+
+
+</RelativeLayout>
