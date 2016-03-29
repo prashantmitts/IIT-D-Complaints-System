@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.example.shardultripathi.moodleplus.ThreadNotification">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cTitle"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cTitle"
+        android:id="@+id/cType"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cType"
+        android:id="@+id/cDescription"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"/>
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="resolve"
+        android:id="@+id/resolvedBox"
+        android:layout_below="@+id/cDescription"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resolvedText"
+        android:layout_below="@+id/cDescription"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cDescription"
+        android:id="@+id/cCreator"
+        android:textColor="#025fb1"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"/>
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/upVoteImage"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/resolvedText"
+        android:clickable="true"
+        android:onClick="upVote"
+        android:background="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/upvotes"
+        android:layout_toRightOf="@+id/upVoteImage"
+        android:layout_marginLeft="1dp"
+        android:layout_below="@+id/resolvedText"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/downVoteImage"
+        android:layout_toRightOf="@+id/upvotes"
+        android:layout_marginLeft="1dp"
+        android:layout_below="@+id/resolvedText"
+        android:clickable="true"
+        android:onClick="downVote"
+        android:background="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/downvotes"
+        android:layout_toRightOf="@+id/downVoteImage"
+        android:layout_marginLeft="1dp"
+        android:layout_below="@+id/resolvedText"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resolvedText"
+        android:id="@+id/cCreatedAt"
+        android:textColor="#999999"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/upVoteImage"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:paddingTop="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/comment1"
+        android:id="@+id/viewComments"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/comment1"
+        android:hint="Add Comment"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="top"
+        android:textSize="16sp"
+        android:textCursorDrawable="@null"
+        android:textColor="#000000"
+        android:inputType="textNoSuggestions|textMultiLine|textCapSentences"
+        android:background="@drawable/edittext_bg">
+    </EditText>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/addComment"
+        android:background="@drawable/button_bg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:onClick="addComment"
+        android:textSize="13sp"/>
+
+
+
+</RelativeLayout>
